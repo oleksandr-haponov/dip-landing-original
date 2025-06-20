@@ -1,0 +1,237 @@
+.order {
+  margin-bottom: var(--between-section-xl);
+
+  @media (max-width: 360px) {
+    margin-bottom: var(--between-section-sm);
+  }
+
+  &-wrapper {
+    position: relative;
+    padding-top: 64px;
+    padding-right: 64px;
+    padding-left: 64px;
+    padding-bottom: 80px;
+    background-color: #f3f3f3;
+    border-radius: 40px;
+    overflow: visible;
+
+    @media (max-width: 800px) {
+      padding-top: 32px;
+      padding-right: 32px;
+      padding-left: 32px;
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 360px) {
+      paddingtop: 32px;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-bottom: 24px;
+      border-radius: 32px;
+    }
+  }
+
+  &-title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 100%;
+    font-weight: 500;
+
+    @media (max-width: 800px) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 360px) {
+      margin-bottom: 24px;
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  &-form {
+    &__columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+
+      @media (max-width: 1280px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media (max-width: 800px) {
+        gap: 24px;
+      }
+
+      @media (max-width: 940px) {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+  }
+
+  &-form__group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    & .text-error {
+      display: none;
+      position: absolute;
+      bottom: -24px;
+      color: #E30000;
+    }
+  }
+
+  &-form__input {
+    padding: 18px 24px;
+    font-size: 18px;
+    line-height: 100%;
+    background-color: #ffffff;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 14px;
+
+    &::placeholder {
+      color: var(--text-color);
+      opacity: 0.5;
+    }
+
+    &[id='cost'] {
+      background-color: #ffffff;
+      border: none;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 360px) {
+      font-size: 16px;
+    }
+
+    &.input-error {
+      border-color: #E30000;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px #ffffff inset; /* Змінюємо фон на білий */
+      -webkit-text-fill-color: var(--text-color); /* Зберігаємо колір тексту */
+      box-shadow: 0 0 0 30px #ffffff inset; /* Сумісність із іншими браузерами */
+      border: 1px solid var(--text-color); /* Зберігаємо стандартний бордер */
+    }
+  }
+
+  &-form__label {
+    font-size: 16px;
+    margin-bottom: 4px;
+
+    &.label-error {
+      color: #E30000;
+    }
+  }
+
+  &-image {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    @media (max-width: 1280px) {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &-button {
+    margin-top: 20px;
+  }
+}
+
+.order-btn {
+  @media (max-width: 505px) {
+  padding: 10px 32px;
+  }
+}
+
+.choices {
+  &.choices[data-type*='select-one'] {
+    .choices__inner {
+      background-color: #ffffff;
+    }
+
+    .choices__list {
+      padding: 0;
+      border-radius: 14px;
+
+      &--dropdown {
+        color: var(--text-color);
+        opacity: 1;
+        background-color: #ffffff;
+      }
+    }
+
+    .choices__item--selectable {
+      color: var(--text-color);
+      opacity: 1;
+      &.is-highlighted {
+        color: var(--text-color);
+        opacity: 1;
+      }
+    }
+
+    .choices__item {
+      color: var(--text-color);
+      opacity: 1;
+      font-size: 18px;
+      @media (max-width: 360px) {
+        font-size: 16px;
+      }
+    }
+
+    .choices__item:not([aria-disabled='true']) {
+      color: var(--text-color);
+      opacity: 1;
+    }
+
+    .choices__item[aria-disabled='true'] {
+      color: var(--text-color);
+      opacity: 0.5;
+    }
+
+    &.is-open .choices__inner {
+    }
+
+    .choices__inner {
+      padding: 18px 24px;
+      border: 1px solid var(--text-color);
+      border-radius: 14px;
+      opacity: 1;
+    }
+
+    &::after {
+      content: '\2304';
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+      pointer-events: none;
+      margin-top: 0;
+      border: none;
+      height: auto;
+      width: auto;
+    }
+
+    &.is-open::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &__item--selectable {
+    color: var(--text-color);
+    opacity: 50%;
+  }
+}

@@ -1,0 +1,33 @@
+.container {
+  width: var(--container-width);
+  max-width: --container-max-width-xl;
+  padding: 0 var(--container-padding-xl);
+
+  @media (max-width: 1440px) {
+    padding: 0 var(--container-padding-lg);
+  }
+
+  @media (max-width: 1280px) {
+    padding: 0 var(--container-padding-md);
+  }
+
+  @media (max-width: 800px) {
+    padding: 0 var(--container-padding-sm);
+  }
+
+  @media (max-width: 360px) {
+    padding: 0 var(--container-padding-xs);
+  }
+
+  &--footer {
+    @media (max-width: 730px) {
+      padding: 0;
+    }
+  }
+
+  &--footer {
+    @media (max-width: 360px) {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+:root {
+  --container-width: 100%;
+  --container-max-width-xl: 1920px;
+
+  --container-padding-xl: 160.5px;
+  --container-padding-lg: 100px;
+  --container-padding-md: 73px;
+  --container-padding-sm: 40px;
+  --container-padding-xs: 20px;
+
+  --container-xs: 321px; 
+  --container-sm: 721px; 
+  --container-md: 1135px; 
+  --container-lg: 1241px; 
+  --container-xl: 1600px; 
+
+  // header.scss
+  --addtitional-beakpoint-xs: 610px;
+  --addtitional-beakpoint-sm: 1100px;
+
+  --page-bg: #ffffff;
+  --text-color: #191a23;
+  --accent: #94e6fa;
+  --gray: #f3f3f3;
+
+  --title-xl: 60px;
+  --title-lh-xl: 64px;
+  --title-lg: 40px;
+  --title-lh-lg: 100%;
+  --card-heading: 30px
+  --card-heading-lh: 100%;
+
+  --subtitle-xl: 18px;
+  --subtitle-lg-xl: 100%;
+  --subtitle-sm: 16px
+  --subtitle-lg-sm: 20px;
+
+
+  --transition: all 0.5s ease-out;
+  --scale-active: scale(0.9);
+
+  --hero-margin-xl: 72px;
+  --hero-margin-sm: 40px;
+
+  --between-section-xl: 120px;
+  --between-section-sm: 80px;
+}
+
+.dark {
+  --page-bg: #191a23;
+  --text-color: #ffffff;
+}

@@ -1,0 +1,118 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 2rem;
+  background: none;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  border-radius: 14px;
+  text-decoration: none;
+  font-family: 'Fixel Display', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  white-space: nowrap;
+  max-height: 68px;
+
+  &:active {
+    transform: var(--scale-active);
+  }
+
+  @media (max-width: 505px) {
+    font-size: 18px;
+    white-space: normal;
+  }
+}
+
+.button--full-width {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.button--primary {
+  background-color: var(--text-color);
+  color: var(--page-bg);
+  border: 1px solid var(--text-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
+}
+
+.button--outlined {
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+  }
+}
+
+.button--inverse {
+  background-color: var(--accent);
+  color: var(--text-color);
+  border: 1px solid var(--accent);
+
+  &:hover,
+  &:focus {
+    background-color: var(--page-bg);
+    border-color: var(--page-bg);
+  }
+}
+
+.button--link {
+  background: transparent;
+  color: var(--page-bg);
+  text-decoration: underline;
+  text-decoration-color: var(--page-bg);
+  padding: 0;
+  border-radius: 0;
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+  }
+}
+
+.button--text {
+  background: transparent;
+  color: var(--color-text);
+  opacity: 0.7;
+  text-decoration: none;
+  padding: 0;
+  border-radius: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+
+
+/* <a href="#" class="button button--primary" title="Замовити роботу">
+  Замовити роботу
+</a>
+
+<a href="#" class="button button--outlined" title="Замовити роботу">
+  Замовити роботу
+</a>
+
+<a href="#" class="button button--inverse" title="Замовити роботу">
+  Замовити роботу
+</a>
+
+<a href="#" class="button button--link" title="Замовити роботу">
+  Замовити роботу
+</a>
+
+<a href="#" class="button button--text" title="Замовити роботу">
+  Замовити роботу
+</a> */
+

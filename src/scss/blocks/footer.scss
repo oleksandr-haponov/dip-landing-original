@@ -1,0 +1,216 @@
+/* Sticky footer --> scss/base/_sticky-footer.scss */
+
+.footer {
+  &__inner {
+    padding-top: 55px;
+    padding-bottom: 50px;
+    padding-left: 64px;
+    padding-right: 64px;
+    background-color: var(--text-color);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom: 1px solid var(--text-color);
+
+    @media (max-width: 800px) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  &__head {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    column-gap: 40px;
+
+    @media (max-width: 1020px) {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      row-gap: 40px;
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      row-gap: 40px;
+    }
+
+    @media (max-width: 505px) {
+      gap: 0;
+    }
+  }
+
+  &__logo {
+    @media (max-width: 505px) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 505px) {
+      max-width: 180px;
+      max-height: 29px;
+    }
+  }
+
+  &__nav {
+
+    & a {
+      text-decoration: underline;
+    }
+    & a:not(:last-child) {
+      margin-right: 40px;
+
+      @media (max-width: 505px) {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 1020px) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    @media (max-width: 600px) {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    @media (max-width: 505px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-self: end;
+    text-align: end;
+
+    @media (max-width: 600px) {
+      grid-column: 1;
+      grid-row: 2;
+      justify-self: start;
+      text-align: start;
+    }
+
+    @media (max-width: 505px) {
+      margin-bottom: 40px;
+    }
+
+    & a {
+      display: block;
+      width: 32px;
+      height: 32px;
+      color: var(--page-bg); 
+      text-decoration: none;
+      transition: fill 0.3s ease;
+
+      &:hover {
+        transition: fill 0.3s ease;
+        color: #94e6fa; /* Змінюємо колір при наведенні */
+      }
+    }
+
+    &--icon {
+      fill: currentColor; /* Використовуємо currentColor, щоб брати колір із батьківського a */
+      transition: fill 0.3s ease;
+    }
+  }
+
+  &__body {
+    display: inline-flex;
+    gap: 40px;
+    margin-top: 64px;
+    @media (max-width: 650px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__form {
+    max-width: 325px;
+  }
+
+  &__input {
+    min-width: 308px;
+    max-height: 62px;
+    padding: 18px 24px;
+    font-size: 18px;
+    line-height: 100%;
+    background-color: transparent;
+    color: var(--page-bg);
+    border: 1px solid var(--gray);
+    border-radius: 14px;
+
+    @media (max-width: 860px) {
+      max-width: 296px;
+      max-height: 56px;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px #191a23 inset; 
+      -webkit-text-fill-color: #FFFFFF; 
+      box-shadow: 0 0 0 30px #191a23  inset; 
+      border: 1px solid var(--text-color);
+    }
+  }
+
+  &__info {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 27px;
+
+    & p {
+      width: fit-content;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      background-color: var(--accent);
+      border-radius: 7px;
+      padding: 4px;
+    }
+
+    & span {
+      color: var(--page-bg);
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #fff;
+    padding-top: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & span {
+      font-size: 20px;
+      color: var(--page-bg);
+
+      @media (max-width: 730px) {
+        font-size: 18px;
+      }
+    }
+
+    & a {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 360px) {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    @media (max-width: 360px) {
+      padding-top: 25px;
+      margin-top: 25px;
+    }
+  }
+}

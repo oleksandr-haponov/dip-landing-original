@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Fixel Display';
+  src: url(../fonts/FixelDisplay-Regular.woff2) format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  src: url(../fonts/FixelDisplay-Medium.woff2) format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  src: url(../fonts/FixelDisplay-SemiBold.woff2) format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url(../fonts/SpaceGrotesk.woff2) format('woff2');
+  font-weight: 500;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Fixel Display';
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+
+

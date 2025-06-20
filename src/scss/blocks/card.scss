@@ -1,0 +1,128 @@
+.card {
+  width: 100%;
+  border: 1px solid var(--text-color);
+  border-radius: 40px;
+  box-shadow: 0 4px;
+
+  @media (max-width: 1280px) {
+    /* flex-direction: column-reverse;
+    gap: 24px;
+    padding: 24px; */
+  }
+
+  @media (max-width: 600px) {
+    // 360px
+    border-radius: 32px;
+    padding: 24px;
+  }
+
+  &--padding {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    @media (max-width: 1280px) {
+      flex-direction: column-reverse;
+      gap: 24px;
+      padding: 24px;
+    }
+    @media (max-width: 600px) {
+      padding: 24px;
+    }
+  }
+
+  &:nth-child(3n + 1) {
+    background-color: var(--gray);
+  }
+  &:nth-child(3n + 2) {
+    background-color: var(--accent);
+  }
+  &:nth-child(3n + 3) {
+    background-color: var(--text-color);
+  }
+
+  &:nth-child(2) .card__heading span,
+  &:nth-child(3) .card__heading span,
+  &:nth-child(5) .card__heading span {
+    background-color: #ffffff;
+  }
+
+  &:nth-child(3) .card__link-text,
+  &:nth-child(6) .card__link-text {
+    color: white;
+  }
+  &:nth-child(3) .card__link-arrow,
+  &:nth-child(6) .card__link-arrow {
+    background-color: white;
+  }
+
+  &__cta {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__image {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 7px;
+    font-size: 30px;
+    line-height: var(--card-heading-lh);
+    font-weight: 500;
+
+    @media (max-width: 1280px) {
+      // 360px
+      font-size: 24px;
+      line-height: 100%;
+    }
+
+    & span {
+      align-self: flex-start;
+      background-color: var(--accent);
+      padding: 0 7px;
+      border-radius: 7px;
+
+      @media (max-width: 1280px) {
+        align-self: center;
+      }
+    }
+
+    & .card__heading-min {
+      font-size: 20px;
+      padding: 0 5px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6.5px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 500;
+
+    &-arrow {
+      width: 41px;
+      height: 41px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--text-color);
+      border-radius: 50%;
+    }
+
+    &-text {
+      color: var(--text-color);
+      white-space: nowrap;
+    }
+  }
+}

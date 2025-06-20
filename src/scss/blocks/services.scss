@@ -1,0 +1,22 @@
+.services {
+  margin-bottom: var(--between-section-xl);
+
+  @media (max-width: 360px) {
+    margin-bottom: var(--between-section-sm);
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 304px;
+  gap: 40px;
+  padding: 0;
+  padding-bottom: 4px;
+
+  @media (max-width: 681px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+

@@ -1,0 +1,1 @@
+export const TEL_REG = /^\+?\d{10,12}$/;

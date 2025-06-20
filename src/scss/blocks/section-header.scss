@@ -1,0 +1,78 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 64px;
+
+  @media (max-width: 600px) {
+    // 360px
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    background-color: var(--accent);
+    padding: 7px;
+    border-radius: 7px;
+
+    font-size: var(--title-lg);
+    line-height: var(--title-lh-lg);
+    font-weight: 500;
+
+    @media (max-width: 600px) {
+      // 360px
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  &__subtitle {
+    font-size: var(--subtitle-xl);
+    line-height: var(--subtitle-lg-x);
+    font-weight: 400;
+
+    @media (max-width: 600px) {
+      // 360px
+      text-align: center;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &--services {
+      max-width: 580px;
+
+      @media (max-width: 800px) {
+        max-width: 502px;
+      }
+
+      @media (max-width: 360px) {
+        max-width: 320px;
+      }
+    }
+
+    &--cooperation {
+      max-width: 292px;
+    }
+
+    &--processes {
+      max-width: 473px;
+
+      @media (max-width: 360px) {
+        max-width: 320px;
+      }
+    }
+
+    &--order {
+      max-width: 524px;
+
+      @media (max-width: 360px) {
+        max-width: 320px;
+      }
+    }
+  }
+}

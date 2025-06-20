@@ -1,0 +1,21 @@
+/* Base */
+@use "./base/reset";
+@use "./base/vars";
+@use "./base/base";
+@use "./base/utils";
+@use "./base/containers";
+@use "./base/sticky-footer";
+
+/* Blocks */
+@use './blocks/logo';
+@use './blocks/header';
+@use './blocks/footer';
+@use './blocks/button';
+@use './blocks/section-header';
+@use './blocks/hero';
+@use './blocks/processes';
+@use './blocks/card';
+@use './blocks/services';
+@use './blocks/order';
+@use './blocks/simplify';
+@use './blocks/seo';

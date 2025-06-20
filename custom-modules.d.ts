@@ -1,0 +1,14 @@
+declare module 'gulp-clean';
+declare module 'gulp-server-livereload';
+declare module 'gulp-notify';
+declare module 'gulp-htmlclean';
+declare module 'gulp-webp-html';
+declare module 'gulp-webp-css';
+declare module 'gulp-sass-glob';
+declare module 'gulp-webp';
+declare module 'gulp-imagemin';
+declare module 'imagemin-mozjpeg';
+declare module 'imagemin-optipng';
+declare module 'imagemin-svgo';
+declare module 'del';
+declare module 'browser-sync';
