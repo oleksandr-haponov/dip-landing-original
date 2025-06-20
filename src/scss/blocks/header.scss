@@ -1,0 +1,33 @@
+.header {
+  padding-top: 60px;
+  
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 610px) { // 360px
+      justify-content: center;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+
+    @media (max-width: 1100px) { // 801px
+      display: none;
+    }
+  }
+
+  @media (max-width: 610px) { // 360px
+    display: none;
+  }
+}

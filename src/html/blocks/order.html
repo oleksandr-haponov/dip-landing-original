@@ -1,0 +1,111 @@
+<section id="order" class="order">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">Замовити роботу</h2>
+      <p class="section-header__subtitle section-header__subtitle--order">
+        Залиш деталі про роботу, яку необхідно виконати і ми надішлемо тобі персональну пропозицію
+        зі співпраці.
+      </p>
+    </div>
+
+    <div class="order-wrapper">
+      <h3 class="order-title">Деталі роботи</h3>
+
+      <form
+        id="order-form"
+        class="order-form"
+        action="#"
+        method="post"
+        enctype="multipart/form-data"
+        novalidate
+        aria-label="Форма замовлення дипломної роботи"
+      >
+        <div class="order-form__columns">
+          <div>
+            <div class="order-form__group">
+              <label for="work-type" class="order-form__label">Тип роботи*</label>
+              <select class="js-choice" id="work-type" name="type" required aria-required="true">
+                <!-- added from js -->
+              </select>
+            </div>
+
+            <div class="order-form__group">
+              <label for="subject" class="order-form__label">Предмет*</label>
+              <select class="js-choice" id="subject" name="subject" required aria-required="true">
+                <!-- added from js -->
+              </select>
+            </div>
+
+            <div class="order-form__group">
+              <label for="email" class="order-form__label">Email*</label>
+              <input
+                class="order-form__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Введіть ваш email"
+                required
+                aria-required="true"
+              />
+              <span class="text-error" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div>
+            <div class="order-form__group">
+              <label class="order-form__label" for="topic">Тема*</label>
+              <input
+                type="text"
+                id="topic"
+                name="topic"
+                class="order-form__input"
+                placeholder="Введіть тему роботи"
+                required
+                aria-required="true"
+              />
+              <span class="text-error" role="status" aria-live="polite"></span>
+            </div>
+
+            <div class="order-form__group">
+              <label class="order-form__label" for="pages">Кількість сторінок*</label>
+              <select class="js-choice" id="pages" name="pages" required aria-required="true">
+                <!-- added from js -->
+              </select>
+            </div>
+
+            <div class="order-form__group">
+              <label class="order-form__label" for="cost">Приблизна вартість роботи:</label>
+              <input
+                type="text"
+                id="cost"
+                name="cost"
+                class="order-form__input"
+                placeholder="Вартість буде розрахована"
+                readonly
+                value="____грн"
+              />
+            </div>
+          </div>
+
+          <div class="order-image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="./img/order-sm.webp" type="image/webp" />
+              <img src="./img/order-xl.webp" alt="Форма замовлення дипломної роботи Student Help" loading="lazy" />
+            </picture>
+          </div>
+        </div>
+
+        <div class="order-button">
+          <button
+            class="button button--primary button--full-width order-btn"
+            type="submit"
+            title="Відправити заявку на співпрацю"
+            aria-label="Відправити форму замовлення"
+          >
+            Отримати пропозицію співпраці
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
